@@ -1,0 +1,26 @@
+/* --- Base Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.buttons a{
+    height: 5rem;
+    text-decoration: none;
+    color: #2a5298;
+    background-color: aliceblue;
+    border-radius: 4px;
+}
+
+ 
