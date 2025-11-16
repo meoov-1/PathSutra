@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="aboutus.css">
     <link rel="stylesheet" href="nav.css">
     <link rel="stylesheet" href="footer.css">
-   
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -42,7 +45,7 @@
         <div class="member-card" data-member="sarah">
             <div class="member-photo-wrapper">
                 <div class="photo-glow"></div>
-                <img src="download (1).jpg" alt="Sarah Johnson" class="member-photo">
+                <img src="Picture/download (1).jpg" alt="Sarah Johnson" class="member-photo">
             </div>
             <div class="member-info">
                 <h2>Hari Krishna Lamichhane</h2>
@@ -61,7 +64,7 @@
         <div class="member-card" data-member="michael">
             <div class="member-photo-wrapper">
                 <div class="photo-glow"></div>
-                <img src="download (2).jpg" alt="Michael Chen" class="member-photo">
+                <img src="Picture/download (2).jpg" alt="Michael Chen" class="member-photo">
             </div>
             <div class="member-info">
                 <h2>Sneha Giri</h2>
@@ -80,7 +83,7 @@
         <div class="member-card" data-member="emily">
             <div class="member-photo-wrapper">
                 <div class="photo-glow"></div>
-                <img src="download (3).jpg" alt="Emily Rodriguez" class="member-photo">
+                <img src="Picture/download (3).jpg" alt="Emily Rodriguez" class="member-photo">
             </div>
             <div class="member-info">
                 <h2>Linda Lamichhane</h2>
@@ -99,7 +102,7 @@
         <div class="member-card" data-member="david">
             <div class="member-photo-wrapper">
                 <div class="photo-glow"></div>
-                <img src="download.jpg" alt="David Kim" class="member-photo">
+                <img src="Picture/download.jpg" alt="David Kim" class="member-photo">
             </div>
             <div class="member-info">
                 <h2>Ujwal Shrestha</h2>
@@ -117,7 +120,7 @@
         <div class="member-card" data-member="jessica">
             <div class="member-photo-wrapper">
                 <div class="photo-glow"></div>
-                <img src="Season 3!!!!!!.jpg" alt="Jessica Williams" class="member-photo">
+                <img src="Picture/Season 3!!!!!!.jpg" alt="Jessica Williams" class="member-photo">
             </div>
             <div class="member-info">
                 <h2>Aakriti Sharma Lamichhane</h2>
@@ -149,6 +152,7 @@
             </ul>
         </div>
     </footer>
+    <button onclick="toggleScroll()" id="scrollToggleBtn"><i class="fa-solid fa-arrow-up"></i></button>
 
 
     <!-- Scroll to Top Button -->
@@ -276,6 +280,18 @@ window.addEventListener('scroll', () => {
   } else {
     scrollBtn.style.display = 'none';
   }
+});
+
+
+// button to take into top
+function toggleScroll() {
+    if (window.scrollY > 0) {
+        // At the top → scroll to bottom
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    } 
+}
+scrollTopBtn.addEventListener("click", () => {
+  window.scrollTo({top: 0, behavior: 'smooth'});
 });
 
     </script>

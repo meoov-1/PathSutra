@@ -4,81 +4,23 @@
   box-sizing: border-box;
 }
 
+:root {
+    --primary-color: #667eea;
+    --primary-dark: #764ba2;
+    --accent-color: #f5576c;
+    --text-dark: #2c3e50;
+    --text-light: #7f8c8d;
+    --bg-light: #f8f9fa;
+    --bg-white: #ffffff;
+    --border-color: #e0e0e0;
+}
+
 body {
   background: #F0F6F6;
   font-size: large;
   min-height: 100vh;
   padding: 20px;  /* Optional padding around content */
-}
-
-/* Header content */
-header {
-  height: 3rem;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 30px;
-  box-sizing: border-box; /* ensures the provided height and width remains same*/
-  gap: 20px;
-}
-
-/* Logo */
-.logo img {
-  height: 60px;
-  width: auto;
-}
-
-/* Navbar container */
-.navbar {
-  display: flex;
-  gap: 20px;
-  flex-grow: 1;  /* Let navbar grow to take available space */
-  justify-content: center;
-}
-
-/* Navbar links */
-.nav-item {
-  color: #0A1128;
-  text-decoration: none;
-  font-weight: 500;
-  padding: 8px 22px;
-  border-radius: 25px;
-  display: flex;
-  align-items: center;
-  transition: background-color 0.5s ease;
-  cursor: pointer;
-  user-select: none; /*user is not able to select text*/
-  white-space: nowrap; /*prevent text from wrapping into new line*/
-}
-
-/* hovered nav-item */
-.nav-item:hover {
-  background-color: rgba(203, 13, 13, 0.3);
-  border-radius: 25px;
-  color: #0A1128;
-}
-
-/* Contact button */
-#contact-btn {
-  height: 7vh;
-  width: 8.9rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  color: #EFFFFA;
-  background-color: #0B4F6C;
-  border: none;
-  border-radius: 2rem;
-  font-weight: 500;
-  transition: background-color 0.5s;
-  
-}
-
-#contact-btn:hover {
-  background-color: #e6c99a;
-  color: #2E3138;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Hero Section */
@@ -159,3 +101,104 @@ header {
   max-width: 400px;
   height: auto;
 }
+
+.overlapping-logos{
+  display: flex;
+  position: relative;
+  margin-top: 2vh;
+}
+
+.overlapping-logos p{
+  margin-left: 30vh;
+}
+
+.overlap-logo{
+  border: 2px solid #D3D3D3;
+  border-radius: 25rem;
+  height: 6vh;
+  width: 6vh;
+  overflow: hidden;
+  position: absolute;   /* allows overlapping */
+  top: 0;    
+}
+
+#overlap-logo-1 {
+    left: 0;
+    z-index: 1;
+}
+
+#overlap-logo-2 {
+    left: 4vh;  /* overlap by a bit (6vh - 2vh = 4vh) */
+    z-index: 2;
+}
+
+#overlap-logo-3 {
+    left: 8vh;  /* overlap second logo */
+    z-index: 3;
+}
+
+#overlap-logo-4 {
+    left: 12vh;  /* overlap by a bit (6vh - 2vh = 4vh) */
+    z-index: 4;
+}
+
+#overlap-logo-5 {
+    left: 16vh;  /* overlap second logo */
+    z-index: 5;
+}
+
+.overlap-logo img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Slider section*/
+#slider-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 180px;     
+  padding: 0 2rem;   
+  background: #fff;
+  min-height: 12vh;
+  
+}
+
+.logo-slider {
+  width: 90%;
+  overflow: hidden;
+  box-sizing: border-box;
+  background-color: #fff;
+  padding: 1rem 0;
+  margin: 0 auto;
+}
+
+.logos {
+  display: flex;
+  animation: slideLeft 300s linear infinite;  /* control of speed*/
+  white-space: nowrap;
+}
+
+.logos img {
+  width: 7vw;
+  height: auto;
+  object-fit: contain;
+  margin-right: 1vw;  
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Slide animation */
+@keyframes slideLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+
+

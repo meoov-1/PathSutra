@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog Timeline</title>
-  <link rel="stylesheet" href="blog.css">
+    <title>Blog Timeline</title>
+    <link rel="stylesheet" href="blog.css">
     <link rel="stylesheet" href="nav.css">
     <link rel="stylesheet" href="footer.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
 </head>
 <body>
         <!-- Navigation -->
 <header>
-    <a href="#" class="logo">
+    <a href="index.html" class="logo">
       <img src="Picture/logo.png" alt="PathSutra Logo"/>
     </a>
     <nav class="navbar">
@@ -20,7 +22,7 @@
       <a href="contact.html" class="nav-item">Contact</a>
       <a href="aboutus.html" class="nav-item">About Us</a>
     </nav>
-    <a href="#" id="contact-btn">Get In Touch</a>
+    <a href="contact.html" id="contact-btn">Get In Touch</a>
   </header>
   <!-- Hero Section -->
   <section class="hero">
@@ -114,11 +116,8 @@
             </ul>
         </div>
     </footer>
-
-
-  <!-- Scroll to Top -->
-  <button class="scroll-top" id="scrollTop">&#8679;</button>
-
+    <button onclick="toggleScroll()" id="scrollToggleBtn"><i class="fa-solid fa-arrow-up"></i></button>
+    
   <script src="blog.js"></script>
 </body>
 </html>

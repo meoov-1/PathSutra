@@ -18,6 +18,29 @@ window.addEventListener("scroll", () => {
   else scrollTopBtn.classList.remove("show");
 });
 
+// Add fade-in animation
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+`;
+document.head.appendChild(style);
+
+// button to take into top
+function toggleScroll() {
+    if (window.scrollY > 0) {
+        // At the top → scroll to bottom
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    } 
+}
 scrollTopBtn.addEventListener("click", () => {
   window.scrollTo({top: 0, behavior: 'smooth'});
 });
