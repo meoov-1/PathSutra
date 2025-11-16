@@ -49,3 +49,11 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// button to take into top
+function toggleScroll() {
+    if (window.scrollY > 0) {
+        // At the top → scroll to bottom
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    } 
+}

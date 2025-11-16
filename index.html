@@ -12,7 +12,7 @@
 </head>
 <body>
   <header>
-    <a href="#" class="logo">
+    <a href="index.html" class="logo">
       <img src="Picture/logo.png" alt="PathSutra Logo"/>
     </a>
     <nav class="navbar">
@@ -20,7 +20,7 @@
       <a href="blog.html" class="nav-item">Blog</a>
       <a href="contact.html" class="nav-item">Contact</a>
     </nav>
-    <a href="#" id="contact-btn">Get In Touch</a>
+    <a href="contact.html" id="contact-btn">Get In Touch</a>
   </header>
 
   <main class="landing-page">
@@ -37,11 +37,59 @@
           <a href="#">Get Started <i class="fa-solid fa-arrow-right"></i></a>
           <a href="#">Learn More <i class="fa-solid fa-circle-info"></i></a>
         </div>
+        <div class="overlapping-logos">
+          <div class="overlap-logo" id="overlap-logo-1"><img src="Picture/dsn 1.png"></div>
+          <div class="overlap-logo" id="overlap-logo-2"><img src="Picture/dsn 2.png"></div>
+          <div class="overlap-logo" id="overlap-logo-3"><img src="Picture/dsn 3.png"></div>
+          <div class="overlap-logo" id="overlap-logo-4"><img src="Picture/dsn 4.png"></div>
+          <div class="overlap-logo" id="overlap-logo-5"><img src="Picture/dsn 5.png"></div>
+          <p>Trusted by 10+ Nepali Business</p>
+        </div>
       </div>
       <div class="hero-title-2">
-        <img src="Picture/logo.png" alt="PathSutra Logo" />
+        <img src="Picture/logo.png" alt="PathSutra Logo"/>
+      </div>
+    </section>
+    <section id="slider-section">
+      <div class="logo-slider">
+        <div class="logos">
+          <img src="Picture/logo1.png"/>
+          <img src="Picture/logo2.png"/>
+          <img src="Picture/logo3.png"/>
+          <img src="Picture/logo4.png"/> 
+          <img src="Picture/logo5.png"/>
+          
+        </div>
       </div>
     </section>
   </main>
+  <button onclick="toggleScroll()" id="scrollToggleBtn"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const logosContainer = document.querySelector('.logos');
+    const originalLogos = logosContainer.innerHTML;
+    
+    // Clone the logos multiple times for seamless infinite loop
+    for (let i = 0; i < 50; i++) {  // Clone 20 times for smooth scrolling (adjust if needed)
+      logosContainer.innerHTML += originalLogos;
+    }
+    
+    // Set dynamic width based on cloned content
+    const logoWidth = 7 + 1;  // 7vw width + 1vw margin
+    const totalLogos = logosContainer.children.length;
+    logosContainer.style.width = `calc(${totalLogos} * ${logoWidth}vw)`;
+  });
+
+// button to take into top
+function toggleScroll() {
+    if (window.scrollY > 0) {
+        // At the top → scroll to bottom
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    } 
+}
+
+
+</script>
 </body>
 </html>

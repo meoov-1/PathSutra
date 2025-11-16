@@ -401,3 +401,25 @@ body {
         gap: 0.5rem;
     }
 }
+
+#scrollToggleBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  background-color: #DA4167;
+  height:8vh ;
+  width: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map iframe{
+    height: 20rem;
+    width: 30rem;
+}
