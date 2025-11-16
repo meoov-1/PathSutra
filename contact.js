@@ -71,6 +71,20 @@ function toggleFAQ(element) {
         element.classList.add('active');
     }
 }
+const scrollBtn = document.getElementById('scroll-top');
+
+scrollBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// Optional: show/hide button when page scrolls
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    scrollBtn.style.display = 'block';
+  } else {
+    scrollBtn.style.display = 'none';
+  }
+});
 
 // Add smooth scroll
 document.addEventListener('DOMContentLoaded', function() {

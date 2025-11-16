@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Our Stories & Articles</title>
-    <link rel="stylesheet" href="blog.css">
-    <link rel="stylesheet" href="style.css">    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Timeline</title>
+  <link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="footer.css">
 </head>
 <body>
-    <!-- Navigation -->
+        <!-- Navigation -->
 <header>
     <a href="#" class="logo">
       <img src="Picture/logo.png" alt="PathSutra Logo"/>
@@ -17,238 +18,107 @@
       <a href="index.html" class="nav-item">Home</a>
       <a href="blog.html" class="nav-item">Blog</a>
       <a href="contact.html" class="nav-item">Contact</a>
+      <a href="aboutus.html" class="nav-item">About Us</a>
     </nav>
     <a href="#" id="contact-btn">Get In Touch</a>
   </header>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Our Blog</h1>
+      <p>Insights and stories from our amazing team</p>
+    </div>
+  </section>
 
-    <!-- Blog Section with Timeline -->
-    <section id="blog-section" class="blog-section">
-        <div class="container">
-            <div class="section-header">
-                <h1>Our Blog</h1>
-                <p>Insights and stories from our amazing team</p>
+  <!-- Timeline Section -->
+  <section class="timeline-section">
+    <div class="container">
+      <div class="timeline">
+        <!-- Article 1 -->
+        <div class="timeline-item left">
+          <div class="content-card" onclick="toggleArticle(this)">
+            <h3>The Future of Web Development</h3>
+            <span class="date">Nov 13, 2024</span>
+            <p class="preview">Exploring emerging technologies and trends shaping modern web development...</p>
+            <div class="full-content hidden">
+              <p>Web development is constantly evolving. Learn about AI-powered assistants, edge computing, and frameworks like WebAssembly.</p>
             </div>
-
-            <!-- Vertical Timeline -->
-            <div class="timeline">
-                <!-- Article 1 -->
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <div class="timeline-circle"></div>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="article-card" onclick="toggleArticle(this)">
-                            <div class="card-header">
-                                <h3>The Future of Web Development</h3>
-                                <span class="date">Nov 13, 2024</span>
-                            </div>
-                            <div class="card-preview">
-                                <p>Exploring emerging technologies and trends that are shaping modern web development...</p>
-                                <span class="read-more">Read More</span>
-                            </div>
-                            <div class="card-content hidden">
-                                <p>Web development is constantly evolving. In this article, we dive deep into the latest frameworks, tools, and best practices that developers should know about. From AI-powered development assistants to edge computing, the landscape is changing rapidly.</p>
-                                <p>We'll explore how technologies like WebAssembly, Service Workers, and real-time collaboration features are revolutionizing the way we build applications. Join us as we discuss what it takes to stay ahead in this dynamic field.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Article 2 -->
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <div class="timeline-circle"></div>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="article-card" onclick="toggleArticle(this)">
-                            <div class="card-header">
-                                <h3>Building Scalable Applications</h3>
-                                <span class="date">Nov 10, 2024</span>
-                            </div>
-                            <div class="card-preview">
-                                <p>Best practices and architectural patterns for creating applications that grow with your business...</p>
-                                <span class="read-more">Read More</span>
-                            </div>
-                            <div class="card-content hidden">
-                                <p>Scalability is one of the most critical aspects of modern application development. In this comprehensive guide, we cover the fundamental principles of building systems that can handle millions of users without breaking a sweat.</p>
-                                <p>From database optimization to microservices architecture, we discuss proven strategies that leading tech companies use. Learn about load balancing, caching strategies, and how to design APIs that scale efficiently.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Article 3 -->
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <div class="timeline-circle"></div>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="article-card" onclick="toggleArticle(this)">
-                            <div class="card-header">
-                                <h3>Design Systems & Component Libraries</h3>
-                                <span class="date">Nov 8, 2024</span>
-                            </div>
-                            <div class="card-preview">
-                                <p>Creating consistency and efficiency across your product with well-designed component libraries...</p>
-                                <span class="read-more">Read More</span>
-                            </div>
-                            <div class="card-content hidden">
-                                <p>Design systems are the backbone of modern product development. They ensure consistency, speed up development, and improve collaboration between designers and developers.</p>
-                                <p>In this article, we walk through the process of building a robust design system from scratch. We discuss documentation, versioning, implementation strategies, and how to maintain your component library as it evolves. Learn from our experience managing design systems at scale.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Article 4 -->
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <div class="timeline-circle"></div>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="article-card" onclick="toggleArticle(this)">
-                            <div class="card-header">
-                                <h3>User Experience & Accessibility</h3>
-                                <span class="date">Nov 5, 2024</span>
-                            </div>
-                            <div class="card-preview">
-                                <p>Creating inclusive digital experiences that everyone can use and enjoy...</p>
-                                <span class="read-more">Read More</span>
-                            </div>
-                            <div class="card-content hidden">
-                                <p>Accessibility isn't just about compliance – it's about creating products that everyone can use. In this article, we explore the principles of accessible design and how to implement them in your projects.</p>
-                                <p>From semantic HTML to ARIA attributes, from keyboard navigation to color contrast, we cover all the essential aspects of building accessible applications. We also discuss testing methodologies and tools that help ensure your products are truly inclusive.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Article 5 -->
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <div class="timeline-circle"></div>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="article-card" onclick="toggleArticle(this)">
-                            <div class="card-header">
-                                <h3>Performance Optimization Techniques</h3>
-                                <span class="date">Nov 1, 2024</span>
-                            </div>
-                            <div class="card-preview">
-                                <p>Techniques to make your applications faster, more responsive, and more efficient...</p>
-                                <span class="read-more">Read More</span>
-                            </div>
-                            <div class="card-content hidden">
-                                <p>Performance is a feature. Slow applications frustrate users and impact business metrics. In this deep dive, we explore various optimization techniques that can dramatically improve your application's speed.</p>
-                                <p>We cover code splitting, lazy loading, image optimization, and advanced caching strategies. We also discuss performance monitoring and how to identify bottlenecks in your application. Learn how to create applications that feel instant and responsive to users.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <span class="read-more">Read More</span>
+          </div>
         </div>
-    </section>
 
-    <!-- Team Section -->
-    <section id="team-section" class="team-section">
-        <div class="container">
-            <div class="section-header">
-                <h1>Meet Our Team</h1>
-                <p>The brilliant minds behind our blog</p>
+        <!-- Article 2 -->
+        <div class="timeline-item right">
+          <div class="content-card" onclick="toggleArticle(this)">
+            <h3>Building Scalable Applications</h3>
+            <span class="date">Nov 10, 2024</span>
+            <p class="preview">Best practices for creating scalable applications...</p>
+            <div class="full-content hidden">
+              <p>Learn load balancing, caching strategies, microservices, and API optimization for millions of users.</p>
             </div>
-
-            <div class="team-grid">
-                <!-- Team Member 1 -->
-                <div class="team-card">
-                    <div class="team-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
-                    <div class="team-info">
-                        <h3>Sarah Johnson</h3>
-                        <p class="role">Full Stack Developer</p>
-                        <p class="bio">Sarah is a passionate developer with 8 years of experience building web applications. She specializes in React and Node.js, and loves mentoring junior developers. In her free time, she contributes to open-source projects.</p>
-                        <div class="social-links">
-                            <a href="#">Twitter</a>
-                            <a href="#">LinkedIn</a>
-                            <a href="#">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Team Member 2 -->
-                <div class="team-card">
-                    <div class="team-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
-                    <div class="team-info">
-                        <h3>Marcus Chen</h3>
-                        <p class="role">Product Designer</p>
-                        <p class="bio">Marcus is a creative designer focused on user-centered design. With 6 years of experience, he's crafted products for startups and Fortune 500 companies. He believes that great design is invisible and makes technology delightful.</p>
-                        <div class="social-links">
-                            <a href="#">Twitter</a>
-                            <a href="#">LinkedIn</a>
-                            <a href="#">Dribbble</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Team Member 3 -->
-                <div class="team-card">
-                    <div class="team-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
-                    <div class="team-info">
-                        <h3>Emily Rodriguez</h3>
-                        <p class="role">DevOps Engineer</p>
-                        <p class="bio">Emily is an infrastructure specialist who loves building reliable systems at scale. With a background in cloud architecture, she helps teams deploy applications safely and efficiently. She's passionate about automation and monitoring.</p>
-                        <div class="social-links">
-                            <a href="#">Twitter</a>
-                            <a href="#">LinkedIn</a>
-                            <a href="#">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Team Member 4 -->
-                <div class="team-card">
-                    <div class="team-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
-                    <div class="team-info">
-                        <h3>David Park</h3>
-                        <p class="role">Data Scientist</p>
-                        <p class="bio">David transforms data into actionable insights. With expertise in machine learning and data analytics, he helps companies make informed decisions. He's particularly interested in the intersection of AI and user experience.</p>
-                        <div class="social-links">
-                            <a href="#">Twitter</a>
-                            <a href="#">LinkedIn</a>
-                            <a href="#">Medium</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Team Member 5 -->
-                <div class="team-card">
-                    <div class="team-image" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);"></div>
-                    <div class="team-info">
-                        <h3>Jessica Williams</h3>
-                        <p class="role">Technical Writer</p>
-                        <p class="bio">Jessica makes complex technical concepts accessible to everyone. With a talent for clear communication, she creates documentation that developers actually want to read. She's passionate about knowledge sharing and community building.</p>
-                        <div class="social-links">
-                            <a href="#">Twitter</a>
-                            <a href="#">LinkedIn</a>
-                            <a href="#">Medium</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <span class="read-more">Read More</span>
+          </div>
         </div>
-    </section>
 
-    <!-- Footer -->
+        <!-- Article 3 -->
+        <div class="timeline-item left">
+          <div class="content-card" onclick="toggleArticle(this)">
+            <h3>Design Systems & Component Libraries</h3>
+            <span class="date">Nov 8, 2024</span>
+            <p class="preview">Creating consistency and efficiency with component libraries...</p>
+            <div class="full-content hidden">
+              <p>Design systems improve UI consistency, speed up development, and enhance collaboration.</p>
+            </div>
+            <span class="read-more">Read More</span>
+          </div>
+        </div>
+
+        <!-- Article 4 -->
+        <div class="timeline-item right">
+          <div class="content-card" onclick="toggleArticle(this)">
+            <h3>User Experience & Accessibility</h3>
+            <span class="date">Nov 5, 2024</span>
+            <p class="preview">Creating inclusive digital experiences...</p>
+            <div class="full-content hidden">
+              <p>Accessibility ensures everyone can use your applications. Covers ARIA, keyboard navigation, and color contrast.</p>
+            </div>
+            <span class="read-more">Read More</span>
+          </div>
+        </div>
+
+        <!-- Article 5 -->
+        <div class="timeline-item left">
+          <div class="content-card" onclick="toggleArticle(this)">
+            <h3>Performance Optimization Techniques</h3>
+            <span class="date">Nov 1, 2024</span>
+            <p class="preview">Make applications faster and more responsive...</p>
+            <div class="full-content hidden">
+              <p>Learn lazy loading, caching, code splitting, and monitoring strategies to boost performance.</p>
+            </div>
+            <span class="read-more">Read More</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+   <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <p>&copy; 2025 Our Blog. All rights reserved.</p>
+                <button class="scroll-top" id="scroll-top">&#8679;</button>
             <ul class="footer-links">
-                <li><a href="#blog-section">Blog</a></li>
-                <li><a href="#team-section">Team</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="blog.html#team-section">Team</a></li>
+                <li><a href="#contact-form">Contact</a></li>
                 <li><a href="#">Privacy</a></li>
             </ul>
         </div>
     </footer>
 
-    <script src="blog.js"></script>
+
+  <!-- Scroll to Top -->
+  <button class="scroll-top" id="scrollTop">&#8679;</button>
+
+  <script src="blog.js"></script>
 </body>
 </html>
