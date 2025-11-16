@@ -1,37 +1,21 @@
-// Toggle article content
-function toggleArticle(cardElement) {
-    const content = cardElement.querySelector('.card-content');
-    const preview = cardElement.querySelector('.card-preview');
-    
-    // Toggle the hidden class
-    content.classList.toggle('hidden');
-    preview.classList.toggle('hidden');
-    
-    // Add smooth scroll animation
-    cardElement.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+// Toggle full content on click
+function toggleArticle(card) {
+  const fullContent = card.querySelector(".full-content");
+  const readMore = card.querySelector(".read-more");
+  fullContent.classList.toggle("hidden");
+  if (fullContent.classList.contains("hidden")) {
+    readMore.textContent = "Read More";
+  } else {
+    readMore.textContent = "Show Less";
+  }
 }
 
-// Add animation on scroll
-document.addEventListener('DOMContentLoaded', function() {
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -100px 0px'
-    };
+// Scroll to Top
+const scrollTopBtn = document.getElementById("scrollTop");
 
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.animation = 'fadeInUp 0.6s ease forwards';
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    // Observe timeline items and team cards
-    document.querySelectorAll('.timeline-item, .team-card').forEach(el => {
-        el.style.opacity = '0';
-        observer.observe(el);
-    });
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) scrollTopBtn.classList.add("show");
+  else scrollTopBtn.classList.remove("show");
 });
 
 // Add fade-in animation
@@ -57,3 +41,6 @@ function toggleScroll() {
         window.scrollTo({ top: 0, behavior: "smooth" });
     } 
 }
+scrollTopBtn.addEventListener("click", () => {
+  window.scrollTo({top: 0, behavior: 'smooth'});
+});

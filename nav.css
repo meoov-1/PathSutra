@@ -1,0 +1,74 @@
+/* Header container */
+header {
+  height: 5rem; /* increased */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.5rem;
+  box-sizing: border-box;
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.55);
+}
+
+/* Logo */
+.logo img {
+  height: 70px; /* increased */
+  width: auto;
+}
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  gap: 1.8rem; /* bigger spacing */
+  flex-grow: 1;
+  justify-content: center;
+}
+
+/* Navbar links */
+.nav-item {
+  padding: 0.75rem 1.8rem; /* bigger area */
+  border-radius: 28px;
+  font-size: 1.05rem; /* slight text bump */
+  font-weight: 500;
+  color: #0A1128;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  user-select: none;
+  transition:
+      background-color 0.35s ease,
+      transform 0.25s ease;
+}
+
+.nav-item:hover {
+  background-color: rgba(203, 13, 13, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Contact button */
+#contact-btn {
+  height: 3.2rem; /* increased */
+  width: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(135deg, #0b4f6c, #083a50);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 2rem;
+  font-weight: 600;
+  font-size: 1.05rem;
+
+  transition:
+      background 0.35s ease,
+      transform 0.25s ease;
+}
+
+#contact-btn:hover {
+  background: linear-gradient(135deg, #e6c99a, #e8b97a);
+  color: #2E3138;
+  transform: translateY(-2px);
+}

@@ -23,76 +23,6 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Header content */
-header {
-  height: 3rem;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 30px;
-  box-sizing: border-box; /* ensures the provided height and width remains same*/
-  gap: 20px;
-}
-
-/* Logo */
-.logo img {
-  height: 60px;
-  width: auto;
-}
-
-/* Navbar container */
-.navbar {
-  display: flex;
-  gap: 20px;
-  flex-grow: 1;  /* Let navbar grow to take available space */
-  justify-content: center;
-}
-
-/* Navbar links */
-.nav-item {
-  color: #0A1128;
-  text-decoration: none;
-  font-weight: 500;
-  padding: 8px 22px;
-  border-radius: 25px;
-  display: flex;
-  align-items: center;
-  transition: background-color 0.5s ease;
-  cursor: pointer;
-  user-select: none; /*user is not able to select text*/
-  white-space: nowrap; /*prevent text from wrapping into new line*/
-}
-
-/* hovered nav-item */
-.nav-item:hover {
-  background-color: rgba(203, 13, 13, 0.3);
-  border-radius: 25px;
-  color: #0A1128;
-}
-
-/* Contact button */
-#contact-btn {
-  height: 7vh;
-  width: 8.9rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  color: #EFFFFA;
-  background-color: #0B4F6C;
-  border: none;
-  border-radius: 2rem;
-  font-weight: 500;
-  transition: background-color 0.2s;
-  
-}
-
-#contact-btn:hover {
-  background-color: #e6c99a;
-  color: #2E3138;
-}
-
 /* Hero Section */
 .landing-page {
   margin-top: 40px;
@@ -269,22 +199,6 @@ header {
   }
 }
 
-#scrollToggleBtn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  border: none;
-  border-radius: 50%;
-  background-color: #DA4167;
-  height:8vh ;
-  width: 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 
 
