@@ -4,23 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Get in Touch</title>
-    <link rel="stylesheet" href="contact.css">
-    <link rel="stylesheet" href="nav.css">
-    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="/contact/contact.css">
+    <link rel="stylesheet" href="/assets/css/nav.css">
+    <link rel="stylesheet" href="/assets/css/footer.css">
 </head>
 <body>
-    <!-- Navigation -->
-<header>
-    <a href="#" class="logo">
-      <img src="Picture/logo.png" alt="PathSutra Logo"/>
-    </a>
-    <nav class="navbar">
-      <a href="index.html" class="nav-item">Home</a>
-      <a href="blog.html" class="nav-item">Blog</a>
-      <a href="contact.html" class="nav-item">Contact</a>
-      <a href="aboutus.html" class="nav-item">About Us</a>
-    </nav>
-    <a href="#" id="contact-btn">Get In Touch</a>
+  <!-- Navigation -->
+  <header id="header">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <img src="/assets/Picture/logo.png" alt="PathSutra"/>
+      </a>
+      
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="navbar" id="navbar">
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="/blog/blog.html" class="nav-item">Blog</a>
+        <a href="/contact/contact.html" class="nav-item">Contact</a>
+        <a href="/about/aboutus.html" class="nav-item">About Us</a>
+        <a href="#" id="contact-btn">Get In Touch</a>
+      </nav>
+    </div>
   </header>
 
     <!-- Hero Section -->
@@ -169,20 +178,114 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Our Blog. All rights reserved.</p>
-                <button class="scroll-top" id="scroll-top">&#8679;</button>
-            <ul class="footer-links">
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="blog.html#team-section">Team</a></li>
-                <li><a href="#contact-form">Contact</a></li>
-                <li><a href="#">Privacy</a></li>
-            </ul>
-        </div>
-    </footer>
+   <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="/assets/Picture/logo.png" alt="PathSutra"/>
+      </div>
+      <ul class="footer-links">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/blog/blog.html">Blog</a></li>
+        <li><a href="/contact/contact.html">Contact</a></li>
+        <li><a href="/about/aboutus.html">About Us</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+      <div class="footer-bottom">
+        <p>&copy; 2025 PathSutra. Empowering futures through education.</p>
+      </div>
+    </div>
+  </footer>
 
-    <script src="contact.js"></script>
+  <!-- Scroll to Top -->
+  <button class="scroll-top" id="scrollTop">↑</button>
+
+  <script>
+    // Mobile Menu Toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const navbar = document.getElementById('navbar');
+    
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navbar.classList.toggle('active');
+    });
+
+
+    // Header scroll effect
+    const header = document.getElementById('header');
+    let lastScroll = 0;
+    
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.scrollY;
+      
+      if (currentScroll > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+      
+      lastScroll = currentScroll;
+    });
+
+         
+
+    // Scroll to top functionality
+    const scrollTopBtn = document.getElementById('scrollTop');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        scrollTopBtn.classList.add('show');
+      } else {
+        scrollTopBtn.classList.remove('show');
+      }
+    });
+
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({ 
+        top: 0, 
+        behavior: 'smooth' 
+      });
+    });
+
+    // Add touch feedback for mobile
+    if ('ontouchstart' in window) {
+      document.querySelectorAll('.content-card, .nav-item, #contact-btn, .scroll-top').forEach(el => {
+        el.addEventListener('touchstart', function() {
+          this.style.transform = 'scale(0.98)';
+        });
+        el.addEventListener('touchend', function() {
+          this.style.transform = '';
+        });
+      });
+    }
+
+    // Optimize animations for reduced motion preference
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.querySelectorAll('.timeline-item').forEach(item => {
+        item.style.animation = 'none';
+        item.style.opacity = '1';
+      });
+    }
+
+
+    // Performance: Debounce scroll events
+    function debounce(func, wait) {
+      let timeout;
+      return function executedFunction(...args) {
+        const later = () => {
+          clearTimeout(timeout);
+          func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+      };
+    }
+
+    // Optimize scroll performance
+    const optimizedScroll = debounce(() => {
+      // Any additional scroll-based features can go here
+    }, 100);
+
+    window.addEventListener('scroll', optimizedScroll, { passive: true });
+  </script>
 </body>
 </html>

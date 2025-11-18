@@ -4,27 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Our Team</title>
-    <link rel="stylesheet" href="aboutus.css">
-    <link rel="stylesheet" href="nav.css">
-    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="/about/aboutus.css">
+    <link rel="stylesheet" href="/assets/css/nav.css">
+    <link rel="stylesheet" href="/assets/css/footer.css">
    
 </head>
 <body>
-    <!-- Navigation Bar -->
-  <header>
-    
-    <a href="#" class="logo">
-      <img src="Picture/logo.png" alt="PathSutra Logo"/>
-    </a>
-    <nav class="navbar">
-      <a href="index.html" class="nav-item">Home</a>
-      <a href="blog.html" class="nav-item">Blog</a>
-      <a href="contact.html" class="nav-item">Contact</a>
-       <a href="aboutus.html" class="nav-item">About Us</a>
-    </nav>
-    <a href="#" id="contact-btn">Get In Touch</a>
-  </header>
+   <!-- Navigation -->
+  <header id="header">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <img src="/assets/Picture/logo.png" alt="PathSutra"/>
+      </a>
+      
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
+      <nav class="navbar" id="navbar">
+        <a href="/index.html" class="nav-item">Home</a>
+        <a href="/blog/blog.html" class="nav-item">Blog</a>
+        <a href="/contact/contact.html" class="nav-item">Contact</a>
+        <a href="/about/aboutus.html" class="nav-item">About Us</a>
+        <a href="#" id="contact-btn">Get In Touch</a>
+      </nav>
+    </div>
+  </header>
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-decoration"></div>
@@ -42,7 +49,7 @@
         <div class="member-card" data-member="sarah">
             <div class="member-photo-wrapper">
                 <div class="photo-glow"></div>
-                <img src="download (1).jpg" alt="Sarah Johnson" class="member-photo">
+                <img src="/assets/Picture/download (1).jpg" alt="Hari Krishna Lamichhane" class="member-photo">
             </div>
             <div class="member-info">
                 <h2>Hari Krishna Lamichhane</h2>
@@ -61,7 +68,7 @@
         <div class="member-card" data-member="michael">
             <div class="member-photo-wrapper">
                 <div class="photo-glow"></div>
-                <img src="download (2).jpg" alt="Michael Chen" class="member-photo">
+                <img src="/assets/Picture/download (2).jpg" alt="Sneha Giri" class="member-photo">
             </div>
             <div class="member-info">
                 <h2>Sneha Giri</h2>
@@ -80,7 +87,7 @@
         <div class="member-card" data-member="emily">
             <div class="member-photo-wrapper">
                 <div class="photo-glow"></div>
-                <img src="download (3).jpg" alt="Emily Rodriguez" class="member-photo">
+                <img src="/assets/Picture/download (3).jpg" alt="Linda Lamichhane" class="member-photo">
             </div>
             <div class="member-info">
                 <h2>Linda Lamichhane</h2>
@@ -99,7 +106,7 @@
         <div class="member-card" data-member="david">
             <div class="member-photo-wrapper">
                 <div class="photo-glow"></div>
-                <img src="download.jpg" alt="David Kim" class="member-photo">
+                <img src="/assets/Picture/download.jpg" alt="Ujwal Shrestha" class="member-photo">
             </div>
             <div class="member-info">
                 <h2>Ujwal Shrestha</h2>
@@ -117,7 +124,7 @@
         <div class="member-card" data-member="jessica">
             <div class="member-photo-wrapper">
                 <div class="photo-glow"></div>
-                <img src="Season 3!!!!!!.jpg" alt="Jessica Williams" class="member-photo">
+                <img src="/assets/Picture/Season 3!!!!!!.jpg" alt="Aakriti Sharma Lamichhane" class="member-photo">
             </div>
             <div class="member-info">
                 <h2>Aakriti Sharma Lamichhane</h2>
@@ -279,5 +286,6 @@ window.addEventListener('scroll', () => {
 });
 
     </script>
+     <script src="nav.js"></script>
 </body>
 </html>
